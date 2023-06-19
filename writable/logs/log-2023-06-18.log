@@ -1,0 +1,17 @@
+CRITICAL - 2023-06-18 08:27:15 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Main.php on line 90.
+ 1 APPPATH\Controllers\Main.php(90): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Main.php', 90)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Main->getUsers()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-18 09:25:40 --> Undefined constant "row"
+in APPPATH\Views\crud\list.php on line 59.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('crud/list', [], true)
+ 4 APPPATH\Controllers\Main.php(87): view('crud/list', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Main->list()
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

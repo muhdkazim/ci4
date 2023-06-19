@@ -1,0 +1,45 @@
+ERROR - 2023-06-19 06:13:53 --> Table 'dummy_db.contact_details' doesn't exist
+CRITICAL - 2023-06-19 06:13:53 --> Table 'dummy_db.contact_details' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `contact_details`
+ORDER BY date(date_created) ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(678): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `contact_details`
+ORDER BY date(date_created) ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `contact_details`
+ORDER BY date(date_created) ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `contact_details`
+ORDER BY date(date_created) ASC', [], false)
+ 5 SYSTEMPATH\Model.php(771): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Main.php(85): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Main->list()
+ 8 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 07:43:19 --> Class "App\Controllers\User" not found
+in APPPATH\Controllers\Main.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(860): App\Controllers\Main->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(459): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 07:46:32 --> Class "App\Controllers\CrudModel" not found
+in APPPATH\Controllers\Main.php on line 110.
+ 1 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Main->getUsers()
+ 2 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 07:47:03 --> Class "App\Controllers\CrudModel" not found
+in APPPATH\Controllers\Main.php on line 110.
+ 1 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Main->getUsers()
+ 2 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 08:11:31 --> Class "App\Controllers\UserModel" not found
+in APPPATH\Controllers\Main.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(860): App\Controllers\Main->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(459): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
