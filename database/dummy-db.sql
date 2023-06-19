@@ -1,12 +1,3 @@
--- phpMyAdmin SQL Dump
--- version 5.1.3
--- https://www.phpmyadmin.net/
---
--- Host: 127.0.0.1
--- Generation Time: Jun 11, 2022 at 07:53 AM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 8.1.5
-
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
@@ -18,10 +9,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `contact_details`
+-- Table structure for table `user`
 --
 
-CREATE TABLE `contact_details` (
+CREATE TABLE `user` (
   `id` int(11) NOT NULL,
   `firstname` varchar(200) NOT NULL,
   `middlename` varchar(200) DEFAULT NULL,
@@ -29,16 +20,17 @@ CREATE TABLE `contact_details` (
   `gender` varchar(50) NOT NULL,
   `contact` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
+  `password` varchar(50) NOT NULL,
   `address` text NOT NULL,
   `date_created` datetime NOT NULL DEFAULT current_timestamp(),
   `date_updated` datetime DEFAULT NULL ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `contact_details`
+-- Dumping data for table `user`
 --
 
-INSERT INTO `contact_details` (`id`, `firstname`, `middlename`, `lastname`, `gender`, `contact`, `email`, `address`, `date_created`, `date_updated`) VALUES
+INSERT INTO `user` (`id`, `firstname`, `middlename`, `lastname`, `gender`, `contact`, `email`, `address`, `date_created`, `date_updated`) VALUES
 (1, 'Mark', 'D', 'Cooper', 'Male', '09123456789', 'mcooper@mail.com', 'Sample Address', '2022-06-11 11:30:19', NULL),
 (2, 'Mike', 'C', 'Williams', 'Male', '09654789', 'mwilliams@mail.com', 'Sample Address Only', '2022-06-11 11:36:34', '2022-06-11 13:48:41'),
 (3, 'Claire', 'C', 'Blake', 'Female', '0964789123', 'cblake@sample.com', 'Sample Address  2.', '2022-06-11 11:42:47', NULL),
@@ -49,9 +41,9 @@ INSERT INTO `contact_details` (`id`, `firstname`, `middlename`, `lastname`, `gen
 --
 
 --
--- Indexes for table `contact_details`
+-- Indexes for table `user`
 --
-ALTER TABLE `contact_details`
+ALTER TABLE `user`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -59,8 +51,8 @@ ALTER TABLE `contact_details`
 --
 
 --
--- AUTO_INCREMENT for table `contact_details`
+-- AUTO_INCREMENT for table `user`
 --
-ALTER TABLE `contact_details`
+ALTER TABLE `user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
